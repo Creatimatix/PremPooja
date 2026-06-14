@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prem Pooja Textile Processors Pvt. Ltd. | Bleaching, Dyeing &amp; Printing</title>
+  <meta name="description" content="Prem Pooja Textile Processors Pvt. Ltd. – Specialists in Bleaching, Dyeing & Printing. Mumbai & Badlapur branches serving textile manufacturers since 1998." />
+  <meta name="keywords" content="textile processing, bleaching, dyeing, printing, fabric processing, Mumbai, Badlapur, Prem Pooja" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      --lime:        #B5CC00;
+      --lime-dark:   #8fa000;
+      --lime-light:  #d4e84a;
+      --lime-bg:     rgba(181,204,0,0.10);
+      --black:       #111111;
+      --dark:        #1a1a1a;
+      --dark2:       #2c2c2c;
+      --gray:        #555555;
+      --lgray:       #999999;
+      --off-white:   #f5f5f5;
+      --white:       #ffffff;
+      --border:      #e0e0e0;
+      --shadow:      0 4px 24px rgba(0,0,0,0.09);
+      --shadow-lg:   0 8px 40px rgba(0,0,0,0.14);
+      --radius:      12px;
+      --tr:          0.30s ease;
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.70;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4,h5 { font-family: 'Montserrat', sans-serif; line-height: 1.25; }
+    a  { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+
+    .container  { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .sec-pad    { padding: 90px 0; }
+    .sec-pad-sm { padding: 64px 0; }
+
+    /* ─── Section labels & titles ─── */
+    .sec-label {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--lime-dark);
+      background: var(--lime-bg);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .sec-title {
+      font-size: clamp(1.75rem, 3.4vw, 2.55rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+    .sec-title span { color: var(--lime-dark); }
+    .sec-sub {
+      font-size: 1.03rem;
+      color: var(--gray);
+      max-width: 620px;
+      line-height: 1.75;
+    }
+    .sec-hdr          { margin-bottom: 52px; }
+    .sec-hdr.center   { text-align: center; }
+    .sec-hdr.center .sec-sub { margin: 0 auto; }
+
+    /* ─── Shared buttons ─── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: 8px;
+      letter-spacing: 0.04em;
+      transition: background var(--tr), transform var(--tr), box-shadow var(--tr);
+      box-shadow: 0 4px 18px rgba(181,204,0,0.38);
+    }
+    .btn-primary:hover { background: var(--lime-dark); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(181,204,0,0.50); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 13px 32px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.48);
+      letter-spacing: 0.04em;
+      transition: all var(--tr);
+    }
+    .btn-outline:hover { border-color: var(--lime); color: var(--lime); background: rgba(181,204,0,0.08); }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: background var(--tr), padding var(--tr), box-shadow var(--tr);
+    }
+    #navbar.scrolled {
+      background: var(--white);
+      padding: 12px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.09);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo */
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon {
+      width: 46px; height: 46px;
+      background: var(--lime);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 10px rgba(181,204,0,0.38);
+    }
+    .logo-txt { display: flex; flex-direction: column; }
+    .logo-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.80rem;
+      font-weight: 800;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      transition: color var(--tr);
+    }
+    #navbar.scrolled .logo-name { color: var(--dark); }
+    .logo-tag {
+      font-size: 0.60rem;
+      font-weight: 700;
+      color: var(--lime);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    #navbar.scrolled .logo-tag { color: var(--lime-dark); }
+
+    /* Nav links */
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.80rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.88);
+      padding: 7px 13px;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+      transition: color var(--tr), background var(--tr);
+    }
+    #navbar.scrolled .nav-links a { color: var(--dark); }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--lime); background: rgba(181,204,0,0.10); }
+    #navbar.scrolled .nav-links a:hover,
+    #navbar.scrolled .nav-links a.active { color: var(--lime-dark); }
+
+    .nav-cta {
+      background: var(--lime) !important;
+      color: var(--dark) !important;
+      padding: 8px 18px !important;
+      border-radius: 8px !important;
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: var(--lime-dark) !important; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px; height: 2.5px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all var(--tr);
+    }
+    #navbar.scrolled .hamburger span { background: var(--dark); }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .mob-menu {
+      display: none;
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: var(--white);
+      padding: 20px 0;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      z-index: 999;
+      border-top: 3px solid var(--lime);
+    }
+    .mob-menu.open { display: block; }
+    .mob-menu a {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--dark);
+      padding: 12px 28px;
+      border-bottom: 1px solid var(--border);
+      transition: color var(--tr), background var(--tr);
+    }
+    .mob-menu a:last-child { border-bottom: none; }
+    .mob-menu a:hover { color: var(--lime-dark); background: var(--off-white); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center center / cover no-repeat;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,rgba(0,0,0,0.76) 0%,rgba(17,17,17,0.60) 55%,rgba(181,204,0,0.12) 100%);
+    }
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      max-width: 710px;
+      padding-top: 80px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(181,204,0,0.16);
+      border: 1px solid rgba(181,204,0,0.38);
+      color: var(--lime);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: clamp(2.1rem, 5vw, 3.75rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.14;
+      margin-bottom: 12px;
+    }
+    .hero-title .accent { color: var(--lime); }
+    .hero-tagline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.95rem, 1.8vw, 1.28rem);
+      font-weight: 700;
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.10em;
+      margin-bottom: 22px;
+    }
+    .hero-desc {
+      font-size: 1.04rem;
+      color: rgba(255,255,255,0.80);
+      max-width: 560px;
+      margin-bottom: 36px;
+      line-height: 1.82;
+    }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    /* Hero bottom stats bar */
+    .hero-stats-bar {
+      position: absolute;
+      bottom: 36px;
+      left: 0; right: 0;
+      z-index: 2;
+    }
+    .hero-stats-bar .container {
+      display: flex;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .hs-cell {
+      flex: 1;
+      text-align: center;
+      padding: 20px 10px;
+      border-right: 1px solid rgba(255,255,255,0.10);
+    }
+    .hs-cell:last-child { border-right: none; }
+    .hs-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--lime);
+      line-height: 1;
+    }
+    .hs-lbl {
+      font-size: 0.70rem;
+      color: rgba(255,255,255,0.68);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-top: 4px;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    #about { background: var(--white); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-img-wrap { position: relative; }
+    .about-img-main {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -22px; right: -22px;
+      background: var(--lime);
+      border-radius: 14px;
+      padding: 22px 26px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .about-badge .big { font-family: 'Montserrat', sans-serif; font-size: 2.3rem; font-weight: 900; color: var(--dark); line-height: 1; }
+    .about-badge .sm  { font-size: 0.78rem; font-weight: 700; color: var(--dark); text-transform: uppercase; letter-spacing: 0.06em; }
+    .about-dot {
+      position: absolute;
+      top: -18px; left: -18px;
+      width: 86px; height: 86px;
+      background: var(--off-white);
+      border-radius: 50%;
+      border: 6px solid var(--white);
+      box-shadow: var(--shadow);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem;
+    }
+    .about-text .sec-sub { max-width: 100%; margin-bottom: 26px; }
+    .about-body { font-size: 0.93rem; color: var(--gray); line-height: 1.85; margin-bottom: 16px; }
+    .about-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .acard {
+      background: var(--off-white);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      border-left: 4px solid var(--lime);
+    }
+    .acard h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .acard p { font-size: 0.85rem; color: var(--gray); line-height: 1.65; }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services { background: var(--off-white); }
+    .srv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .srv-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 34px 26px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr);
+    }
+    .srv-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--lime);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--tr);
+    }
+    .srv-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .srv-card:hover::after { transform: scaleX(1); }
+    .srv-icon {
+      width: 56px; height: 56px;
+      background: var(--lime-bg);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem;
+      margin-bottom: 18px;
+      transition: background var(--tr);
+    }
+    .srv-card:hover .srv-icon { background: var(--lime); }
+    .srv-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 11px;
+    }
+    .srv-card p  { font-size: 0.91rem; color: var(--gray); line-height: 1.72; }
+    .srv-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: var(--lime-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      transition: gap var(--tr);
+    }
+    .srv-more::after { content: '→'; }
+    .srv-card:hover .srv-more { gap: 10px; }
+
+    /* ============================================================
+       WHY CHOOSE US
+    ============================================================ */
+    #why { background: var(--dark); }
+    #why .sec-title { color: var(--white); }
+    #why .sec-sub   { color: rgba(255,255,255,0.62); }
+    #why .sec-label { color: var(--lime); background: rgba(181,204,0,0.12); }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      background: rgba(255,255,255,0.05);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 56px;
+    }
+    .stat-cell {
+      text-align: center;
+      padding: 38px 16px;
+      background: var(--dark2);
+      transition: background var(--tr);
+    }
+    .stat-cell:hover { background: rgba(181,204,0,0.10); }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.9rem;
+      font-weight: 900;
+      color: var(--lime);
+      line-height: 1;
+    }
+    .stat-lbl {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.62);
+      margin-top: 8px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .why-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      transition: background var(--tr), border-color var(--tr);
+    }
+    .why-card:hover { background: rgba(181,204,0,0.07); border-color: rgba(181,204,0,0.28); }
+    .why-ico {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(181,204,0,0.14);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+    }
+    .why-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .why-card p { font-size: 0.87rem; color: rgba(255,255,255,0.58); line-height: 1.72; }
+
+    /* ============================================================
+       PROCESS
+    ============================================================ */
+    #process { background: var(--white); }
+    .proc-row {
+      display: flex;
+      gap: 0;
+      position: relative;
+    }
+    .proc-row::before {
+      content: '';
+      position: absolute;
+      top: 37px; left: 10%;
+      width: 80%; height: 2px;
+      background: linear-gradient(90deg, var(--lime), var(--lime-dark));
+      z-index: 0;
+    }
+    .proc-step { flex: 1; text-align: center; padding: 0 10px; position: relative; z-index: 1; }
+    .proc-circle {
+      width: 74px; height: 74px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 3px solid var(--lime);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 1.45rem;
+      box-shadow: 0 0 0 6px rgba(181,204,0,0.09);
+      transition: background var(--tr), box-shadow var(--tr);
+    }
+    .proc-step:hover .proc-circle { background: var(--lime); box-shadow: 0 4px 20px rgba(181,204,0,0.38); }
+    .proc-num {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 800;
+      color: var(--lime-dark);
+      letter-spacing: 0.08em;
+    }
+    .proc-step:hover .proc-num { color: var(--dark); }
+    .proc-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.87rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .proc-desc { font-size: 0.79rem; color: var(--gray); line-height: 1.62; }
+
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    #gallery { background: var(--off-white); }
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 190px;
+      gap: 14px;
+    }
+    .gal-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gal-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gal-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gal-item:hover img { transform: scale(1.07); }
+    .gal-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.58) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--tr);
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+    }
+    .gal-item:hover .gal-overlay { opacity: 1; }
+    .gal-overlay span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ============================================================
+       INDUSTRIES
+    ============================================================ */
+    #industries { background: var(--white); }
+    .ind-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+    .ind-item {
+      background: var(--off-white);
+      border-radius: var(--radius);
+      padding: 28px 14px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all var(--tr);
+    }
+    .ind-item:hover {
+      background: var(--lime);
+      border-color: var(--lime);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+    .ind-ico { font-size: 2.1rem; margin-bottom: 11px; }
+    .ind-item h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    #testimonials { background: var(--off-white); }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .test-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 34px 28px;
+      border: 1px solid var(--border);
+      position: relative;
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .test-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .test-card .q-mark {
+      position: absolute;
+      top: 14px; right: 22px;
+      font-family: Georgia, serif;
+      font-size: 3.8rem;
+      color: var(--lime);
+      opacity: 0.35;
+      line-height: 1;
+    }
+    .stars { color: var(--lime); font-size: 1rem; letter-spacing: 2px; margin-bottom: 14px; }
+    .test-text {
+      font-size: 0.93rem;
+      color: var(--gray);
+      font-style: italic;
+      line-height: 1.82;
+      margin-bottom: 22px;
+    }
+    .test-author { display: flex; align-items: center; gap: 13px; }
+    .auth-av {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: var(--lime);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--dark);
+      flex-shrink: 0;
+    }
+    .auth-name { font-family: 'Montserrat', sans-serif; font-size: 0.90rem; font-weight: 700; color: var(--dark); }
+    .auth-role { font-size: 0.78rem; color: var(--lgray); }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact { background: var(--dark); }
+    #contact .sec-title { color: var(--white); }
+    #contact .sec-sub   { color: rgba(255,255,255,0.62); }
+    #contact .sec-label { color: var(--lime); background: rgba(181,204,0,0.12); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 48px;
+    }
+    .branch-list { display: flex; flex-direction: column; gap: 18px; }
+    .branch-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      transition: border-color var(--tr), background var(--tr);
+    }
+    .branch-card:hover { border-color: var(--lime); background: rgba(181,204,0,0.05); }
+    .branch-hdr {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .branch-badge {
+      background: var(--lime);
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.70rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .branch-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .cdt {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin-bottom: 9px;
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.62);
+    }
+    .cdt .ico { font-size: 0.95rem; flex-shrink: 0; margin-top: 2px; }
+    .cdt a { color: inherit; transition: color var(--tr); }
+    .cdt a:hover { color: var(--lime); }
+    .qc-area {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .qc-area h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 13px;
+    }
+    .qc-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 10px;
+      font-size: 0.89rem;
+      color: rgba(255,255,255,0.72);
+    }
+    .qc-item a { color: inherit; transition: color var(--tr); }
+    .qc-item a:hover { color: var(--lime); }
+
+    /* Form */
+    .form-wrap {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 38px 34px;
+    }
+    .form-wrap h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 26px;
+    }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .f-grp { margin-bottom: 14px; }
+    .f-grp label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 7px;
+    }
+    .f-grp input,
+    .f-grp select,
+    .f-grp textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 11px 15px;
+      color: var(--white);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.91rem;
+      outline: none;
+      transition: border-color var(--tr), background var(--tr);
+    }
+    .f-grp select option { background: var(--dark2); }
+    .f-grp input::placeholder,
+    .f-grp textarea::placeholder { color: rgba(255,255,255,0.28); }
+    .f-grp input:focus,
+    .f-grp select:focus,
+    .f-grp textarea:focus { border-color: var(--lime); background: rgba(181,204,0,0.06); }
+    .f-grp textarea { resize: vertical; min-height: 108px; }
+    .btn-submit {
+      width: 100%;
+      background: var(--lime);
+      color: var(--dark);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.93rem;
+      font-weight: 800;
+      padding: 14px;
+      border-radius: 8px;
+      letter-spacing: 0.04em;
+      margin-top: 8px;
+      transition: background var(--tr), transform var(--tr);
+    }
+    .btn-submit:hover { background: var(--lime-dark); transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 18px;
+      background: rgba(181,204,0,0.10);
+      border: 1px solid rgba(181,204,0,0.40);
+      border-radius: 8px;
+      color: var(--lime);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-top: 14px;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer { background: var(--black); padding: 58px 0 0; }
+    .foot-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr 1fr 1fr;
+      gap: 46px;
+      padding-bottom: 46px;
+    }
+    .foot-brand .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .foot-logo-ico {
+      width: 46px; height: 46px;
+      background: var(--lime);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .foot-logo-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.3;
+    }
+    .foot-logo-tag {
+      font-size: 0.58rem;
+      color: var(--lime);
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .foot-desc { font-size: 0.87rem; color: rgba(255,255,255,0.48); line-height: 1.80; margin-bottom: 20px; }
+    .soc-links { display: flex; gap: 9px; }
+    .soc-lnk {
+      width: 37px; height: 37px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.58);
+      transition: all var(--tr);
+    }
+    .soc-lnk:hover { background: var(--lime); color: var(--dark); border-color: var(--lime); }
+    .foot-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      margin-bottom: 18px;
+    }
+    .foot-links li { margin-bottom: 9px; }
+    .foot-links a {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.48);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color var(--tr);
+    }
+    .foot-links a::before { content: '›'; color: var(--lime); }
+    .foot-links a:hover { color: var(--lime); }
+    .fct-item {
+      display: flex;
+      gap: 9px;
+      margin-bottom: 12px;
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.65;
+    }
+    .fct-item span:first-child { flex-shrink: 0; }
+    .fct-item a { color: inherit; transition: color var(--tr); }
+    .fct-item a:hover { color: var(--lime); }
+    .foot-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .foot-bottom p { font-size: 0.81rem; color: rgba(255,255,255,0.33); }
+    .foot-bottom a { color: var(--lime); }
+    .foot-btm-links { display: flex; gap: 18px; }
+    .foot-btm-links a { font-size: 0.81rem; color: rgba(255,255,255,0.33); transition: color var(--tr); }
+    .foot-btm-links a:hover { color: var(--lime); }
+
+    /* ============================================================
+       SCROLL-TO-TOP
+    ============================================================ */
+    #scrollTop {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: var(--lime);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.15rem;
+      color: var(--dark);
+      box-shadow: 0 4px 16px rgba(181,204,0,0.38);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--tr), transform var(--tr);
+      z-index: 800;
+    }
+    #scrollTop.visible { opacity: 1; pointer-events: all; }
+    #scrollTop:hover { transform: translateY(-3px); }
+
+    /* ============================================================
+       FADE-IN ANIMATIONS
+    ============================================================ */
+    .fi {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.62s ease, transform 0.62s ease;
+    }
+    .fi.d1 { transition-delay: 0.10s; }
+    .fi.d2 { transition-delay: 0.20s; }
+    .fi.d3 { transition-delay: 0.30s; }
+    .fi.d4 { transition-delay: 0.40s; }
+    .fi.d5 { transition-delay: 0.50s; }
+    .fi.in { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1100px) {
+      .srv-grid  { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid  { grid-template-columns: repeat(2, 1fr); }
+      .gal-grid  { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+      .gal-item:nth-child(1) { grid-column: span 2; }
+      .test-grid { grid-template-columns: repeat(2, 1fr); }
+      .test-grid .test-card:last-child { grid-column: span 2; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    }
+    @media (max-width: 768px) {
+      .sec-pad   { padding: 62px 0; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-badge { bottom: -14px; right: -8px; }
+      .about-dot   { top: -10px; left: -8px; }
+      .about-cards { grid-template-columns: 1fr; }
+      .srv-grid    { grid-template-columns: 1fr; }
+      .why-grid    { grid-template-columns: 1fr; }
+      .proc-row    { flex-direction: column; gap: 22px; }
+      .proc-row::before { display: none; }
+      .ind-list  { grid-template-columns: repeat(3, 1fr); }
+      .test-grid { grid-template-columns: 1fr; }
+      .test-grid .test-card:last-child { grid-column: span 1; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .f-row { grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+      .hero-stats-bar .container { flex-wrap: wrap; }
+      .hs-cell { min-width: 50%; }
+    }
+    @media (max-width: 520px) {
+      .hero-title   { font-size: 1.95rem; }
+      .hero-actions { flex-direction: column; }
+      .ind-list  { grid-template-columns: repeat(2, 1fr); }
+      .gal-grid  { grid-template-columns: 1fr; }
+      .gal-item:nth-child(1) { grid-column: span 1; }
+      .foot-grid { grid-template-columns: 1fr; }
+      .form-wrap { padding: 22px 18px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Prem Pooja Textile – Home">
+      <div class="logo-icon" aria-hidden="true">🏇</div>
+      <div class="logo-txt">
+        <span class="logo-name">Prem Pooja Textile</span>
+        <span class="logo-tag">Bleaching · Dyeing · Printing</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<nav class="mob-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#hero">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#why">Why Us</a>
+  <a href="#process">Our Process</a>
+  <a href="#industries">Industries</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero" aria-labelledby="heroTitle">
+  <div class="container">
+    <div class="hero-body">
+      <div class="hero-badge" aria-label="Established 1998, Mumbai and Badlapur">
+        ★ Est. 1998 &nbsp;·&nbsp; Mumbai &amp; Badlapur
+      </div>
+      <h1 class="hero-title" id="heroTitle">
+        <span class="accent">Prem Pooja</span><br>Textile Processors
+      </h1>
+      <p class="hero-tagline">Specialist in Bleaching, Dyeing &amp; Printing</p>
+      <p class="hero-desc">
+        Transforming fabrics with precision and excellence. Delivering superior quality, consistency, and innovation to textile manufacturers across India since 1998.
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-outline">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats-bar" aria-label="Company statistics">
+    <div class="container">
+      <div class="hs-cell">
+        <div class="hs-num">25+</div>
+        <div class="hs-lbl">Years Experience</div>
+      </div>
+      <div class="hs-cell">
+        <div class="hs-num">500+</div>
+        <div class="hs-lbl">Happy Clients</div>
+      </div>
+      <div class="hs-cell">
+        <div class="hs-num">1000+</div>
+        <div class="hs-lbl">Fabric Types</div>
+      </div>
+      <div class="hs-cell">
+        <div class="hs-num">2</div>
+        <div class="hs-lbl">Branches</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+============================================================ -->
+<section id="about" class="sec-pad" aria-labelledby="aboutTitle">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-img-wrap fi">
+        <img
+          src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80"
+          alt="Inside Prem Pooja Textile Processors facility"
+          class="about-img-main"
+          loading="lazy"
+          width="800" height="430"
+        />
+        <div class="about-dot" aria-hidden="true">🏭</div>
+        <div class="about-badge" aria-label="25 plus years of excellence">
+          <div class="big">25+</div>
+          <div class="sm">Years of<br>Excellence</div>
+        </div>
+      </div>
+
+      <div class="about-text fi d2">
+        <span class="sec-label">About Us</span>
+        <h2 class="sec-title" id="aboutTitle">Crafting Excellence in Every <span>Fibre</span></h2>
+        <p class="sec-sub" style="margin-bottom:20px;">
+          Founded in 1998, Prem Pooja Textile Processors Pvt. Ltd. has grown from a single-unit operation into one of Maharashtra's most trusted textile processing companies — with state-of-the-art facilities in Mumbai and Badlapur.
+        </p>
+        <p class="about-body">
+          We have spent over two decades refining our processes, investing in modern technology, and building lasting relationships with garment manufacturers, export houses, and fabric wholesalers. Our commitment is simple: deliver consistent quality, on time, every time.
+        </p>
+        <p class="about-body">
+          Our skilled technicians and processing experts work with a diverse range of fabrics — from delicate cottons and silks to heavy industrial textiles — ensuring every batch meets the strictest quality benchmarks before it leaves our facility.
+        </p>
+        <div class="about-cards">
+          <div class="acard">
+            <h4>🎯 Our Mission</h4>
+            <p>To deliver superior textile processing services that empower manufacturers with quality, efficiency, and reliability.</p>
+          </div>
+          <div class="acard">
+            <h4>🔭 Our Vision</h4>
+            <p>To be the leading textile processing partner in India, setting benchmarks in innovation and sustainable practices.</p>
+          </div>
+          <div class="acard">
+            <h4>💎 Quality First</h4>
+            <p>Every batch undergoes rigorous quality testing before delivery — zero compromise on standards.</p>
+          </div>
+          <div class="acard">
+            <h4>🌱 Sustainability</h4>
+            <p>Eco-conscious processing with responsible chemical usage and effluent treatment systems.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES
+============================================================ -->
+<section id="services" class="sec-pad" aria-labelledby="servicesTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">What We Do</span>
+      <h2 class="sec-title" id="servicesTitle">Our Core <span>Services</span></h2>
+      <p class="sec-sub">
+        From raw grey fabric to finished, vibrant textile — we handle every stage of processing with precision and care.
+      </p>
+    </div>
+    <div class="srv-grid">
+      <article class="srv-card fi">
+        <div class="srv-icon" aria-hidden="true">🧼</div>
+        <h3>Bleaching</h3>
+        <p>Professional bleaching that achieves pristine whiteness while preserving fabric integrity. Suitable for cotton, polyester blends, and synthetic fabrics using eco-approved bleaching agents.</p>
+        <span class="srv-more">Learn More</span>
+      </article>
+      <article class="srv-card fi d1">
+        <div class="srv-icon" aria-hidden="true">🎨</div>
+        <h3>Dyeing</h3>
+        <p>Vibrant, long-lasting dyeing across the full colour spectrum. We use reactive, vat, and disperse dyes with computerised colour-matching to achieve exact Pantone specifications.</p>
+        <span class="srv-more">Learn More</span>
+      </article>
+      <article class="srv-card fi d2">
+        <div class="srv-icon" aria-hidden="true">🖨️</div>
+        <h3>Printing</h3>
+        <p>Screen, rotary, and digital printing for complex patterns and designs. Our printing lines deliver sharp, vivid prints on all fabric types with exceptional wash fastness.</p>
+        <span class="srv-more">Learn More</span>
+      </article>
+      <article class="srv-card fi d1">
+        <div class="srv-icon" aria-hidden="true">✨</div>
+        <h3>Finishing</h3>
+        <p>Mechanical and chemical finishing including calendering, mercerizing, sanforizing, anti-wrinkle, and softening — enhancing texture, feel, and performance characteristics.</p>
+        <span class="srv-more">Learn More</span>
+      </article>
+      <article class="srv-card fi d2">
+        <div class="srv-icon" aria-hidden="true">🏭</div>
+        <h3>Fabric Processing</h3>
+        <p>End-to-end grey fabric processing including pre-treatment, scouring, heat-setting, and preparation for downstream use. We handle bulk orders with consistent quality and fast turnaround.</p>
+        <span class="srv-more">Learn More</span>
+      </article>
+      <article class="srv-card fi d3">
+        <div class="srv-icon" aria-hidden="true">🔬</div>
+        <h3>Quality Testing</h3>
+        <p>In-house testing lab with advanced instruments for colour fastness, tensile strength, shrinkage, and dimensional stability. Every lot is certified before dispatch.</p>
+        <span class="srv-more">Learn More</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US
+============================================================ -->
+<section id="why" class="sec-pad" aria-labelledby="whyTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">Why Choose Us</span>
+      <h2 class="sec-title" id="whyTitle">The <span>Prem Pooja</span> Difference</h2>
+      <p class="sec-sub">
+        Two and a half decades of expertise, innovation, and an unwavering focus on client satisfaction sets us apart.
+      </p>
+    </div>
+
+    <div class="stats-grid fi" aria-label="Company statistics">
+      <div class="stat-cell">
+        <div class="stat-num" data-target="25" data-suffix="+">25+</div>
+        <div class="stat-lbl">Years of Experience</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-target="500" data-suffix="+">500+</div>
+        <div class="stat-lbl">Satisfied Clients</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-target="1000" data-suffix="+">1000+</div>
+        <div class="stat-lbl">Fabric Types Processed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num" data-target="2" data-suffix="">2</div>
+        <div class="stat-lbl">Strategic Branches</div>
+      </div>
+    </div>
+
+    <div class="why-grid fi">
+      <div class="why-card">
+        <div class="why-ico" aria-hidden="true">⚡</div>
+        <h4>Fast Turnaround</h4>
+        <p>Streamlined production lines ensure quick processing without quality compromise. We meet tight deadlines and manage urgent orders efficiently.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico" aria-hidden="true">🎯</div>
+        <h4>Precision Colour Matching</h4>
+        <p>Computerised colour-matching systems guarantee exact shade reproduction, batch after batch — ensuring consistency across your entire production run.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico" aria-hidden="true">🏆</div>
+        <h4>Certified Quality</h4>
+        <p>All processed fabrics undergo multi-stage quality control. Our in-house laboratory is equipped with industry-standard testing equipment.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico" aria-hidden="true">🔧</div>
+        <h4>Modern Machinery</h4>
+        <p>Continuous investment in the latest textile processing technology — from HTHP dyeing machines to automated screen-printing lines.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico" aria-hidden="true">🌱</div>
+        <h4>Eco-Friendly Processes</h4>
+        <p>Responsible chemical management, effluent treatment plants, and water recycling systems make our processes environmentally conscious.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico" aria-hidden="true">🤝</div>
+        <h4>Dedicated Support</h4>
+        <p>Our experienced team offers personalised consultation and end-to-end support — from sample development to bulk production and dispatch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS
+============================================================ -->
+<section id="process" class="sec-pad" style="background:var(--off-white)" aria-labelledby="processTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">How It Works</span>
+      <h2 class="sec-title" id="processTitle">Our <span>Process</span></h2>
+      <p class="sec-sub">
+        A proven, step-by-step workflow ensuring quality and traceability at every stage of processing.
+      </p>
+    </div>
+    <div class="proc-row fi" role="list" aria-label="Processing steps">
+      <div class="proc-step" role="listitem">
+        <div class="proc-circle" aria-hidden="true">
+          <span class="proc-num">STEP 01</span>📦
+        </div>
+        <h4 class="proc-title">Fabric Intake</h4>
+        <p class="proc-desc">Client fabric received, inspected for weight and construction. Each lot is tagged and logged into our tracking system.</p>
+      </div>
+      <div class="proc-step" role="listitem">
+        <div class="proc-circle" aria-hidden="true">
+          <span class="proc-num">STEP 02</span>🧪
+        </div>
+        <h4 class="proc-title">Pre-treatment</h4>
+        <p class="proc-desc">Scouring, singeing, and desizing to remove impurities and sizing agents — preparing the fabric for uniform processing.</p>
+      </div>
+      <div class="proc-step" role="listitem">
+        <div class="proc-circle" aria-hidden="true">
+          <span class="proc-num">STEP 03</span>🎨
+        </div>
+        <h4 class="proc-title">Processing</h4>
+        <p class="proc-desc">Bleaching, dyeing, or printing performed using precision-controlled machines with calibrated parameters per fabric type.</p>
+      </div>
+      <div class="proc-step" role="listitem">
+        <div class="proc-circle" aria-hidden="true">
+          <span class="proc-num">STEP 04</span>🔬
+        </div>
+        <h4 class="proc-title">Quality Check</h4>
+        <p class="proc-desc">Multi-point lab testing including shade, fastness, shrinkage, and physical properties. Non-conforming batches are reprocessed.</p>
+      </div>
+      <div class="proc-step" role="listitem">
+        <div class="proc-circle" aria-hidden="true">
+          <span class="proc-num">STEP 05</span>🚚
+        </div>
+        <h4 class="proc-title">Delivery</h4>
+        <p class="proc-desc">Finished fabric is packed, labelled, and dispatched with a quality certificate. On-time delivery is guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALLERY
+============================================================ -->
+<section id="gallery" class="sec-pad" aria-labelledby="galleryTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">Our Work</span>
+      <h2 class="sec-title" id="galleryTitle">Processing <span>Gallery</span></h2>
+      <p class="sec-sub">
+        A glimpse into our facility, fabric processing operations, and the vibrant results we deliver.
+      </p>
+    </div>
+    <div class="gal-grid fi">
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+             alt="Fabric dyeing vats in operation" loading="lazy" width="800" height="400" />
+        <div class="gal-overlay"><span>Dyeing Process</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80"
+             alt="Colourful dyed fabric rolls" loading="lazy" width="800" height="200" />
+        <div class="gal-overlay"><span>Colour Fabrics</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80"
+             alt="Textile mill processing floor" loading="lazy" width="800" height="200" />
+        <div class="gal-overlay"><span>Mill Operations</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80"
+             alt="Cotton fabric processing" loading="lazy" width="800" height="200" />
+        <div class="gal-overlay"><span>Cotton Processing</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80"
+             alt="Textile printing machinery" loading="lazy" width="800" height="200" />
+        <div class="gal-overlay"><span>Printing</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800&q=80"
+             alt="Quality testing in lab" loading="lazy" width="800" height="200" />
+        <div class="gal-overlay"><span>Quality Testing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INDUSTRIES
+============================================================ -->
+<section id="industries" class="sec-pad" style="background:var(--off-white)" aria-labelledby="industriesTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">Industries Served</span>
+      <h2 class="sec-title" id="industriesTitle">Who We <span>Work With</span></h2>
+      <p class="sec-sub">
+        Trusted by manufacturers and exporters across a wide range of textile industries throughout India.
+      </p>
+    </div>
+    <div class="ind-list fi">
+      <div class="ind-item">
+        <div class="ind-ico" aria-hidden="true">👕</div>
+        <h4>Garment Manufacturers</h4>
+      </div>
+      <div class="ind-item">
+        <div class="ind-ico" aria-hidden="true">🛏️</div>
+        <h4>Home Textiles</h4>
+      </div>
+      <div class="ind-item">
+        <div class="ind-ico" aria-hidden="true">⚙️</div>
+        <h4>Industrial Fabrics</h4>
+      </div>
+      <div class="ind-item">
+        <div class="ind-ico" aria-hidden="true">👗</div>
+        <h4>Fashion &amp; Apparel</h4>
+      </div>
+      <div class="ind-item">
+        <div class="ind-ico" aria-hidden="true">📦</div>
+        <h4>Export Houses</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section id="testimonials" class="sec-pad" aria-labelledby="testimonialsTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">Testimonials</span>
+      <h2 class="sec-title" id="testimonialsTitle">What Our <span>Clients Say</span></h2>
+      <p class="sec-sub">
+        We let our quality speak. Here's what long-standing clients have to say about working with Prem Pooja Textile.
+      </p>
+    </div>
+    <div class="test-grid fi">
+      <article class="test-card">
+        <div class="q-mark" aria-hidden="true">"</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="test-text">
+          "We have been working with Prem Pooja Textile Processors for over 10 years. Their consistency in colour matching and on-time delivery is unmatched. The bleaching quality for our export-grade cotton is exceptional — batch after batch."
+        </p>
+        <div class="test-author">
+          <div class="auth-av" aria-hidden="true">RF</div>
+          <div>
+            <div class="auth-name">Mr. Rajesh Mehta</div>
+            <div class="auth-role">Director, Rajesh Fabrics Pvt. Ltd., Mumbai</div>
+          </div>
+        </div>
+      </article>
+      <article class="test-card">
+        <div class="q-mark" aria-hidden="true">"</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="test-text">
+          "Prem Pooja is our go-to processing partner for all polyester-cotton blends. The team is responsive, understands our requirements perfectly, and consistently delivers superior quality. Highly recommended for any serious textile business."
+        </p>
+        <div class="test-author">
+          <div class="auth-av" aria-hidden="true">ST</div>
+          <div>
+            <div class="auth-name">Mr. Suresh Patel</div>
+            <div class="auth-role">Partner, Surat Textiles Co., Surat</div>
+          </div>
+        </div>
+      </article>
+      <article class="test-card">
+        <div class="q-mark" aria-hidden="true">"</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="test-text">
+          "The printing quality from Prem Pooja is outstanding — vivid colours, sharp details, and excellent wash fastness. They handled our peak-season bulk order with impressive speed and zero compromise on quality. A truly reliable partner."
+        </p>
+        <div class="test-author">
+          <div class="auth-av" aria-hidden="true">MG</div>
+          <div>
+            <div class="auth-name">Ms. Meena Shah</div>
+            <div class="auth-role">CEO, Mumbai Garments Ltd., Mumbai</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+============================================================ -->
+<section id="contact" class="sec-pad" aria-labelledby="contactTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">Get In Touch</span>
+      <h2 class="sec-title" id="contactTitle">Contact <span>Us</span></h2>
+      <p class="sec-sub">
+        Reach out to our team at either branch — we'd love to discuss your textile processing requirements.
+      </p>
+    </div>
+    <div class="contact-grid fi">
+
+      <!-- Branch info -->
+      <div>
+        <div class="branch-list">
+          <div class="branch-card">
+            <div class="branch-hdr">
+              <span class="branch-badge">📍 Branch 1</span>
+              <h3>Mumbai Office</h3>
+            </div>
+            <div class="cdt">
+              <span class="ico" aria-hidden="true">🏢</span>
+              <span>Plot No. 45, MIDC Industrial Area, Andheri East, Mumbai – 400093, Maharashtra</span>
+            </div>
+            <div class="cdt">
+              <span class="ico" aria-hidden="true">📞</span>
+              <a href="tel:+919819570709">+91 98195 70709</a>
+            </div>
+            <div class="cdt">
+              <span class="ico" aria-hidden="true">🕐</span>
+              <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+            </div>
+          </div>
+          <div class="branch-card">
+            <div class="branch-hdr">
+              <span class="branch-badge">📍 Branch 2</span>
+              <h3>Badlapur Factory</h3>
+            </div>
+            <div class="cdt">
+              <span class="ico" aria-hidden="true">🏭</span>
+              <span>Gala No. 12, Badlapur Industrial Estate, Badlapur (W), Thane – 421503, Maharashtra</span>
+            </div>
+            <div class="cdt">
+              <span class="ico" aria-hidden="true">📞</span>
+              <a href="tel:+919820280057">+91 98202 80057</a>
+            </div>
+            <div class="cdt">
+              <span class="ico" aria-hidden="true">🕐</span>
+              <span>Mon – Sat: 8:00 AM – 7:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="qc-area">
+          <h4>Quick Contact</h4>
+          <div class="qc-item">
+            <span aria-hidden="true">📞</span>
+            <a href="tel:+919819570709">+91 98195 70709</a>
+          </div>
+          <div class="qc-item">
+            <span aria-hidden="true">📞</span>
+            <a href="tel:+919820280057">+91 98202 80057</a>
+          </div>
+          <div class="qc-item">
+            <span aria-hidden="true">📧</span>
+            <a href="mailto:prempoojatex@hotmail.com">prempoojatex@hotmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="form-wrap">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm" novalidate>
+          <div class="f-row">
+            <div class="f-grp">
+              <label for="fName">First Name <span style="color:#e55">*</span></label>
+              <input type="text" id="fName" name="fName" placeholder="Rajesh" autocomplete="given-name" required />
+            </div>
+            <div class="f-grp">
+              <label for="lName">Last Name</label>
+              <input type="text" id="lName" name="lName" placeholder="Mehta" autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="f-grp">
+            <label for="email">Email Address <span style="color:#e55">*</span></label>
+            <input type="email" id="email" name="email" placeholder="rajesh@example.com" autocomplete="email" required />
+          </div>
+          <div class="f-grp">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98XXXXXXXX" autocomplete="tel" />
+          </div>
+          <div class="f-grp">
+            <label for="service">Service Required</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>Bleaching</option>
+              <option>Dyeing</option>
+              <option>Printing</option>
+              <option>Finishing</option>
+              <option>Fabric Processing</option>
+              <option>Quality Testing</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+          <div class="f-grp">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your fabric processing requirements — fabric type, quantity, timeline…"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">Send Message →</button>
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            ✅ Thank you! Your message has been received. We'll respond within 24 hours.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="foot-grid">
+
+      <!-- Brand -->
+      <div class="foot-brand">
+        <div class="logo-row">
+          <div class="foot-logo-ico" aria-hidden="true">🏇</div>
+          <div>
+            <div class="foot-logo-name">Prem Pooja Textile<br>Processors Pvt. Ltd.</div>
+            <div class="foot-logo-tag">Bleaching · Dyeing · Printing</div>
+          </div>
+        </div>
+        <p class="foot-desc">
+          Transforming fabrics with precision and excellence since 1998. Your trusted partner for all textile processing needs — Mumbai &amp; Badlapur.
+        </p>
+        <div class="soc-links" aria-label="Social media links">
+          <a href="#" class="soc-lnk" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="soc-lnk" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="soc-lnk" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="mailto:prempoojatex@hotmail.com" class="soc-lnk" aria-label="Email us">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul class="foot-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul class="foot-links">
+          <li><a href="#services">Bleaching</a></li>
+          <li><a href="#services">Dyeing</a></li>
+          <li><a href="#services">Printing</a></li>
+          <li><a href="#services">Finishing</a></li>
+          <li><a href="#services">Fabric Processing</a></li>
+          <li><a href="#services">Quality Testing</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <div class="fct-item">
+          <span aria-hidden="true">📍</span>
+          <span>MIDC, Andheri East<br>Mumbai – 400093</span>
+        </div>
+        <div class="fct-item">
+          <span aria-hidden="true">📍</span>
+          <span>Badlapur Industrial Estate<br>Thane – 421503</span>
+        </div>
+        <div class="fct-item">
+          <span aria-hidden="true">📞</span>
+          <span>
+            <a href="tel:+919819570709">+91 98195 70709</a><br>
+            <a href="tel:+919820280057">+91 98202 80057</a>
+          </span>
+        </div>
+        <div class="fct-item">
+          <span aria-hidden="true">📧</span>
+          <a href="mailto:prempoojatex@hotmail.com">prempoojatex@hotmail.com</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="foot-bottom">
+      <p>© 2024 <a href="#hero">Prem Pooja Textile Processors Pvt. Ltd.</a> All rights reserved.</p>
+      <div class="foot-btm-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll-to-top -->
+<button id="scrollTop" aria-label="Scroll back to top">↑</button>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── DOM refs ── */
+  const navbar     = document.getElementById('navbar');
+  const hamburger  = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const scrollBtn  = document.getElementById('scrollTop');
+  const form       = document.getElementById('contactForm');
+  const formOk     = document.getElementById('formSuccess');
+  const submitBtn  = document.getElementById('submitBtn');
+
+  /* ── Navbar + scroll-top on scroll ── */
+  const SECTIONS = ['hero','about','services','why','process','gallery','industries','testimonials','contact'];
+
+  function onScroll() {
+    const y = window.scrollY;
+    navbar.classList.toggle('scrolled', y > 60);
+    scrollBtn.classList.toggle('visible', y > 300);
+
+    // Active nav highlight
+    let current = '';
+    SECTIONS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && y >= el.offsetTop - 130) current = id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ── Scroll-to-top ── */
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Hamburger ── */
+  function closeMenu() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  }
+
+  hamburger.addEventListener('click', () => {
+    const open = hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  /* ── Smooth scroll offset ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 78, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ── Fade-in on scroll ── */
+  const fiEls = document.querySelectorAll('.fi');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -36px 0px' });
+    fiEls.forEach(el => io.observe(el));
+  } else {
+    fiEls.forEach(el => el.classList.add('in'));
+  }
+
+  /* ── Counter animation ── */
+  function animateCount(el, target, suffix, duration) {
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.floor(eased * target) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const statsGrid = document.querySelector('.stats-grid');
+  let statsAnimated = false;
+  if (statsGrid && 'IntersectionObserver' in window) {
+    const sio = new IntersectionObserver((entries) => {
+      entries.forEach(en => {
+        if (en.isIntersecting && !statsAnimated) {
+          statsAnimated = true;
+          statsGrid.querySelectorAll('.stat-num').forEach(el => {
+            const target = parseInt(el.dataset.target, 10);
+            const suffix = el.dataset.suffix || '';
+            animateCount(el, target, suffix, 1800);
+          });
+          sio.unobserve(statsGrid);
+        }
+      });
+    }, { threshold: 0.35 });
+    sio.observe(statsGrid);
+  }
+
+  /* ── Contact form ── */
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name  = document.getElementById('fName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!name) { alert('Please enter your first name.'); return; }
+    if (!email || !emailRe.test(email)) { alert('Please enter a valid email address.'); return; }
+
+    submitBtn.textContent = 'Sending…';
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+      formOk.style.display = 'block';
+      submitBtn.textContent = 'Send Message →';
+      submitBtn.disabled = false;
+      form.reset();
+      formOk.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(() => { formOk.style.display = 'none'; }, 7000);
+    }, 1400);
+  });
+
+})();
+</script>
+
+</body>
+</html>
