@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabrics & Services | Prem Pooja Textile Processors Pvt. Ltd.</title>
+  <meta name="description" content="Explore the full range of fabric types processed and detailed services offered by Prem Pooja Textile Processors — Bleaching, Dyeing, Printing and more." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23B5CC00'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='36'>🏇%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lime:       #B5CC00;
+      --lime-dark:  #8fa000;
+      --lime-light: #d4e84a;
+      --lime-bg:    rgba(181,204,0,0.10);
+      --navy:       #0D1B2A;
+      --navy2:      #162235;
+      --gold:       #C9A84C;
+      --gold-bg:    rgba(201,168,76,0.10);
+      --dark:       #1a1a1a;
+      --charcoal:   #2D2D2D;
+      --gray:       #5E5E5E;
+      --lgray:      #999;
+      --off-white:  #F6F6F2;
+      --cream:      #FAF7F0;
+      --white:      #FFFFFF;
+      --border:     #E2DDD4;
+      --shadow:     0 4px 24px rgba(0,0,0,0.08);
+      --shadow-lg:  0 10px 46px rgba(0,0,0,0.13);
+      --tr:         0.28s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--charcoal); background: var(--white); line-height: 1.72; overflow-x: hidden; }
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; line-height: 1.22; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .sec-pad    { padding: 88px 0; }
+    .sec-pad-sm { padding: 60px 0; }
+
+    /* ── Labels & titles ── */
+    .sec-label { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.20em; text-transform: uppercase; color: var(--lime-dark); background: var(--lime-bg); padding: 5px 14px; border-radius: 20px; margin-bottom: 12px; }
+    .sec-label.gold { color: var(--gold); background: var(--gold-bg); }
+    .sec-title { font-size: clamp(1.7rem, 3.2vw, 2.5rem); font-weight: 800; color: var(--dark); margin-bottom: 16px; }
+    .sec-title span { color: var(--lime-dark); }
+    .sec-title.light { color: var(--white); }
+    .sec-title.light span { color: var(--lime-light); }
+    .sec-sub { font-size: 1.01rem; color: var(--gray); max-width: 600px; line-height: 1.80; }
+    .sec-hdr { margin-bottom: 52px; }
+    .sec-hdr.center { text-align: center; }
+    .sec-hdr.center .sec-sub { margin: 0 auto; }
+
+    /* ── Buttons ── */
+    .btn-lime { display: inline-block; background: var(--lime); color: var(--dark); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; padding: 13px 30px; border-radius: 6px; letter-spacing: 0.05em; box-shadow: 0 4px 16px rgba(181,204,0,0.35); transition: all var(--tr); }
+    .btn-lime:hover { background: var(--lime-dark); transform: translateY(-2px); }
+    .btn-outline { display: inline-block; background: transparent; color: var(--dark); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; padding: 12px 28px; border-radius: 6px; border: 2px solid var(--border); letter-spacing: 0.05em; transition: all var(--tr); }
+    .btn-outline:hover { border-color: var(--lime); color: var(--lime-dark); }
+
+    /* ── NAVBAR ── */
+    #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; background: var(--navy); border-bottom: 1px solid rgba(181,204,0,0.18); transition: all var(--tr); }
+    #navbar.scrolled { padding: 11px 0; box-shadow: 0 2px 24px rgba(0,0,0,0.22); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { width: 44px; height: 44px; background: var(--lime); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+    .logo-name { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.2; }
+    .logo-tag  { font-size: 0.58rem; color: var(--lime); font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a { font-family: 'Montserrat', sans-serif; font-size: 0.76rem; font-weight: 700; color: rgba(255,255,255,0.72); padding: 7px 12px; letter-spacing: 0.06em; text-transform: uppercase; transition: color var(--tr); border-radius: 4px; }
+    .nav-links a:hover, .nav-links a.active { color: var(--lime); }
+    .nav-links a.current { color: var(--lime); background: var(--lime-bg); }
+    .nav-cta { background: var(--lime) !important; color: var(--dark) !important; border-radius: 6px !important; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--lime-dark) !important; color: var(--dark) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all var(--tr); }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mob-menu { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--navy); padding: 14px 0; z-index: 999; border-top: 2px solid var(--lime); box-shadow: var(--shadow-lg); }
+    .mob-menu.open { display: block; }
+    .mob-menu a { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.72); padding: 12px 24px; border-bottom: 1px solid rgba(255,255,255,0.05); transition: color var(--tr); }
+    .mob-menu a:hover { color: var(--lime); }
+
+    /* ── PAGE HERO ── */
+    #page-hero {
+      background: var(--navy);
+      padding: 130px 0 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    #page-hero::before { content:''; position:absolute; inset:0; background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=60') center/cover no-repeat; opacity: 0.08; }
+    #page-hero::after  { content:''; position:absolute; bottom:0; left:0; right:0; height:4px; background: linear-gradient(90deg, var(--lime), var(--lime-dark)); }
+    .ph-inner { position: relative; z-index: 1; }
+    .ph-breadcrumb { display: flex; align-items: center; gap: 8px; font-family: 'Montserrat', sans-serif; font-size: 0.70rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px; }
+    .ph-breadcrumb a { color: var(--lime); transition: color var(--tr); }
+    .ph-breadcrumb a:hover { color: var(--lime-light); }
+    .ph-breadcrumb span { color: rgba(255,255,255,0.28); }
+    .ph-title { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 900; color: var(--white); margin-bottom: 16px; }
+    .ph-title em { font-style: normal; color: var(--lime); }
+    .ph-sub { font-size: 1.06rem; color: rgba(255,255,255,0.62); max-width: 580px; line-height: 1.80; margin-bottom: 28px; font-weight: 300; }
+    .ph-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ph-tag { background: rgba(181,204,0,0.12); border: 1px solid rgba(181,204,0,0.28); color: var(--lime); font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; }
+
+    /* ── FABRIC TYPES ── */
+    #fabrics { background: var(--white); }
+    .fabric-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+    .filter-btn { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 18px; border-radius: 20px; background: var(--off-white); border: 1px solid var(--border); color: var(--gray); cursor: pointer; transition: all var(--tr); }
+    .filter-btn:hover, .filter-btn.active { background: var(--lime); color: var(--dark); border-color: var(--lime); }
+    .fabrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .fabric-card {
+      border-radius: 10px; overflow: hidden; border: 1px solid var(--border);
+      transition: transform var(--tr), box-shadow var(--tr);
+      background: var(--white);
+    }
+    .fabric-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .fabric-img { height: 210px; overflow: hidden; position: relative; }
+    .fabric-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .fabric-card:hover .fabric-img img { transform: scale(1.06); }
+    .fabric-badge { position: absolute; top: 12px; left: 12px; background: var(--lime); color: var(--dark); font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; }
+    .fabric-body { padding: 22px 20px; }
+    .fabric-body h3 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+    .fabric-body p { font-size: 0.88rem; color: var(--gray); line-height: 1.72; margin-bottom: 16px; }
+    .fabric-specs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 16px; }
+    .fspec { background: var(--off-white); border: 1px solid var(--border); font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); padding: 3px 9px; border-radius: 4px; }
+    .fabric-services { border-top: 1px solid var(--border); padding-top: 14px; }
+    .fabric-services span { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; font-weight: 700; color: var(--lgray); letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .fabric-srv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .fsrv { background: var(--lime-bg); color: var(--lime-dark); font-family: 'Montserrat', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 12px; border: 1px solid rgba(181,204,0,0.25); }
+
+    /* ── SERVICE DETAIL ── */
+    #service-detail { background: var(--off-white); }
+    .srv-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .srv-detail-card {
+      background: var(--white); border-radius: 10px;
+      overflow: hidden; border: 1px solid var(--border);
+      transition: box-shadow var(--tr);
+    }
+    .srv-detail-card:hover { box-shadow: var(--shadow); }
+    .srv-detail-header {
+      background: var(--navy); padding: 26px 28px;
+      display: flex; align-items: center; gap: 16px;
+      border-bottom: 3px solid var(--lime);
+    }
+    .srv-detail-icon { font-size: 2rem; flex-shrink: 0; }
+    .srv-detail-header h3 { font-family: 'Montserrat', sans-serif; font-size: 1.12rem; font-weight: 700; color: var(--white); }
+    .srv-detail-header p { font-size: 0.80rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+    .srv-detail-body { padding: 26px 28px; }
+    .srv-detail-body > p { font-size: 0.92rem; color: var(--gray); line-height: 1.80; margin-bottom: 20px; }
+    .srv-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+    .srv-feature { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: var(--charcoal); }
+    .srv-feature::before { content: '✓'; color: var(--lime-dark); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .srv-fabrics-row { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 14px; border-top: 1px solid var(--border); }
+    .srv-fabrics-row span { font-family: 'Montserrat', sans-serif; font-size: 0.60rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--lgray); align-self: center; }
+    .srv-fabric-tag { background: var(--off-white); border: 1px solid var(--border); font-family: 'Montserrat', sans-serif; font-size: 0.60rem; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; padding: 3px 8px; border-radius: 4px; }
+
+    /* ── COMPARISON TABLE ── */
+    #comparison { background: var(--white); }
+    .tbl-wrap { overflow-x: auto; }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .comp-table th { background: var(--navy); color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.70rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 15px 18px; text-align: left; border-right: 1px solid rgba(255,255,255,0.08); }
+    .comp-table th:first-child { background: var(--dark); }
+    .comp-table td { padding: 14px 18px; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); color: var(--charcoal); vertical-align: middle; }
+    .comp-table tr:nth-child(even) td { background: var(--off-white); }
+    .comp-table tr:hover td { background: var(--lime-bg); }
+    .comp-table td:first-child { font-family: 'Montserrat', sans-serif; font-size: 0.84rem; font-weight: 700; color: var(--dark); background: var(--off-white) !important; }
+    .comp-table tr:hover td:first-child { background: var(--lime-bg) !important; }
+    .check { color: var(--lime-dark); font-size: 1rem; font-weight: 700; }
+    .cross { color: var(--lgray); font-size: 1rem; }
+    .part  { color: var(--gold); font-size: 0.85rem; font-weight: 700; }
+
+    /* ── PROCESS TABS ── */
+    #process-tabs { background: var(--cream); }
+    .tab-nav { display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 42px; overflow-x: auto; }
+    .tab-btn { font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 22px; background: none; color: var(--gray); border: none; border-bottom: 3px solid transparent; margin-bottom: -2px; cursor: pointer; white-space: nowrap; transition: all var(--tr); }
+    .tab-btn.active { color: var(--lime-dark); border-bottom-color: var(--lime); }
+    .tab-btn:hover { color: var(--dark); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+    .tab-img { border-radius: 10px; overflow: hidden; }
+    .tab-img img { width: 100%; height: 340px; object-fit: cover; }
+    .tab-content h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--dark); margin-bottom: 14px; }
+    .tab-content p { font-size: 0.93rem; color: var(--gray); line-height: 1.82; margin-bottom: 16px; }
+    .tab-steps { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .tab-step { display: flex; gap: 14px; align-items: flex-start; }
+    .tab-step-num { width: 28px; height: 28px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-size: 0.70rem; font-weight: 800; color: var(--dark); flex-shrink: 0; }
+    .tab-step-txt h4 { font-family: 'Montserrat', sans-serif; font-size: 0.84rem; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
+    .tab-step-txt p { font-size: 0.82rem; color: var(--gray); line-height: 1.60; }
+
+    /* ── SPECS CALLOUT ── */
+    #specs-callout { background: var(--navy); }
+    .callout-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: rgba(255,255,255,0.04); border-radius: 8px; overflow: hidden; }
+    .callout-item { background: var(--navy2); padding: 34px 22px; text-align: center; transition: background var(--tr); }
+    .callout-item:hover { background: rgba(181,204,0,0.08); }
+    .callout-ico { font-size: 2rem; margin-bottom: 12px; }
+    .callout-item h4 { font-family: 'Montserrat', sans-serif; font-size: 0.80rem; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .callout-item p { font-size: 0.82rem; color: rgba(255,255,255,0.50); line-height: 1.65; }
+
+    /* ── CTA BANNER ── */
+    #cta-banner { background: var(--lime); padding: 60px 0; }
+    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+    .cta-inner h2 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.5rem,3vw,2rem); font-weight: 800; color: var(--dark); }
+    .cta-inner p { font-size: 1rem; color: rgba(13,27,42,0.68); margin-top: 8px; }
+    .cta-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .cta-btn-dark { display: inline-block; background: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; padding: 13px 28px; border-radius: 6px; letter-spacing: 0.05em; transition: all var(--tr); }
+    .cta-btn-dark:hover { background: var(--navy); }
+    .cta-btn-out { display: inline-block; background: transparent; color: var(--dark); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; padding: 12px 28px; border-radius: 6px; border: 2px solid rgba(13,27,42,0.28); letter-spacing: 0.05em; transition: all var(--tr); }
+    .cta-btn-out:hover { border-color: var(--dark); background: rgba(13,27,42,0.06); }
+
+    /* ── FOOTER ── */
+    #footer { background: var(--dark); padding: 48px 0 0; }
+    .foot-inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 40px; flex-wrap: wrap; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .foot-brand-blk { max-width: 300px; }
+    .fl-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .fl-ico { width: 42px; height: 42px; background: var(--lime); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+    .fl-name { font-family: 'Montserrat', sans-serif; font-size: 0.76rem; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.3; }
+    .fl-tag  { font-size: 0.56rem; color: var(--lime); font-weight: 700; letter-spacing: 0.10em; text-transform: uppercase; }
+    .foot-desc { font-size: 0.84rem; color: rgba(255,255,255,0.40); line-height: 1.78; }
+    .foot-col h4 { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lime); margin-bottom: 16px; }
+    .foot-links li { margin-bottom: 9px; }
+    .foot-links a { font-size: 0.84rem; color: rgba(255,255,255,0.40); display: flex; align-items: center; gap: 6px; transition: color var(--tr); }
+    .foot-links a::before { content:'›'; color: var(--lime); }
+    .foot-links a:hover { color: var(--lime); }
+    .foot-bottom { padding: 18px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .foot-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+    .foot-bottom a { color: var(--lime); }
+    #scrollTop { position: fixed; bottom: 26px; right: 26px; width: 42px; height: 42px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--dark); opacity: 0; pointer-events: none; transition: opacity var(--tr), transform var(--tr); z-index: 800; box-shadow: 0 3px 14px rgba(181,204,0,0.40); }
+    #scrollTop.visible { opacity: 1; pointer-events: all; }
+    #scrollTop:hover { transform: translateY(-3px); }
+    .fi { opacity: 0; transform: translateY(24px); transition: opacity 0.60s ease, transform 0.60s ease; }
+    .fi.d1{transition-delay:0.10s}.fi.d2{transition-delay:0.20s}.fi.d3{transition-delay:0.30s}.fi.d4{transition-delay:0.40s}
+    .fi.in { opacity: 1; transform: translateY(0); }
+    @media(max-width:1024px){ .fabrics-grid{grid-template-columns:repeat(2,1fr);} .srv-detail-grid{grid-template-columns:1fr;} .callout-grid{grid-template-columns:repeat(2,1fr);} .tab-panel.active{grid-template-columns:1fr;} .tab-img{display:none;} }
+    @media(max-width:768px){ .nav-links{display:none;} .hamburger{display:flex;} .fabrics-grid{grid-template-columns:1fr;} .cta-inner{flex-direction:column;} .foot-inner{flex-direction:column;} .sec-pad{padding:60px 0;} }
+    @media(max-width:520px){ .callout-grid{grid-template-columns:1fr 1fr;} }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Prem Pooja Textile — Home">
+      <div class="logo-icon" aria-hidden="true">🏇</div>
+      <div><span class="logo-name">Prem Pooja Textile</span><br><span class="logo-tag">Bleaching · Dyeing · Printing</span></div>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#fabrics" class="current">Fabrics</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<nav class="mob-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="#fabrics">Fabrics</a>
+  <a href="#service-detail">Service Details</a>
+  <a href="#comparison">Comparison</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section id="page-hero" aria-labelledby="pageTitle">
+  <div class="container ph-inner">
+    <nav class="ph-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span aria-current="page">Fabrics &amp; Services</span>
+    </nav>
+    <h1 class="ph-title" id="pageTitle">Fabric Types &amp; <em>Service Details</em></h1>
+    <p class="ph-sub">An in-depth look at the fabrics we process and the specialised services we bring to each — from delicate natural fibres to high-performance synthetics.</p>
+    <div class="ph-tags">
+      <span class="ph-tag">Cotton</span>
+      <span class="ph-tag">Polyester</span>
+      <span class="ph-tag">Silk</span>
+      <span class="ph-tag">Linen</span>
+      <span class="ph-tag">Viscose</span>
+      <span class="ph-tag">Blends</span>
+      <span class="ph-tag">Industrial</span>
+    </div>
+  </div>
+</section>
+
+<!-- FABRIC TYPES -->
+<section id="fabrics" class="sec-pad" aria-labelledby="fabricsTitle">
+  <div class="container">
+    <div class="sec-hdr fi">
+      <span class="sec-label">What We Process</span>
+      <h2 class="sec-title" id="fabricsTitle">Fabric <span>Types</span></h2>
+      <p class="sec-sub">We work with a comprehensive range of natural, synthetic, and blended fabrics. Each type demands specific chemistry and machine parameters — our expertise ensures optimal results every time.</p>
+    </div>
+    <div class="fabric-filter fi" role="group" aria-label="Filter fabric types">
+      <button class="filter-btn active" data-filter="all">All Fabrics</button>
+      <button class="filter-btn" data-filter="natural">Natural Fibres</button>
+      <button class="filter-btn" data-filter="synthetic">Synthetic</button>
+      <button class="filter-btn" data-filter="blend">Blends</button>
+      <button class="filter-btn" data-filter="specialty">Specialty</button>
+    </div>
+    <div class="fabrics-grid fi" id="fabricsGrid">
+
+      <!-- Cotton -->
+      <article class="fabric-card" data-category="natural">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=600&q=80" alt="Cotton fabric texture" loading="lazy" />
+          <span class="fabric-badge">Natural</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Cotton</h3>
+          <p>The most widely processed fabric at our facility. Cotton accepts dyes exceptionally well and can be bleached to bright whiteness. We handle grey cotton, combed cotton, mercerised cotton, and organic cotton varieties.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 80–400</span>
+            <span class="fspec">Thread Count: 40s–120s</span>
+            <span class="fspec">Weaves: Plain, Twill, Satin</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Bleaching</span>
+              <span class="fsrv">Dyeing</span>
+              <span class="fsrv">Printing</span>
+              <span class="fsrv">Mercerising</span>
+              <span class="fsrv">Sanforizing</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Polyester -->
+      <article class="fabric-card" data-category="synthetic">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80" alt="Polyester fabric colour" loading="lazy" />
+          <span class="fabric-badge" style="background:var(--navy);color:var(--white);">Synthetic</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Polyester</h3>
+          <p>Processed using disperse dyes under high-temperature, high-pressure conditions in our HTHP machines. We achieve deep, vibrant shades on polyester with excellent wash and light fastness properties.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 60–350</span>
+            <span class="fspec">Denier: 50D–600D</span>
+            <span class="fspec">Weaves: Taffeta, Georgette, Dobby</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Dyeing</span>
+              <span class="fsrv">Printing</span>
+              <span class="fsrv">Heat Setting</span>
+              <span class="fsrv">Finishing</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Silk -->
+      <article class="fabric-card" data-category="natural">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Silk fabric sheen" loading="lazy" />
+          <span class="fabric-badge">Natural</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Silk</h3>
+          <p>Delicate handling is paramount with silk. We use acid dyes and gentle processing to preserve the natural lustre and hand feel. Silk dyeing requires precise pH control and temperature management throughout.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 12–120</span>
+            <span class="fspec">MM: 8–40</span>
+            <span class="fspec">Types: Charmeuse, Chiffon, Dupion</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Dyeing</span>
+              <span class="fsrv">Printing</span>
+              <span class="fsrv">Degumming</span>
+              <span class="fsrv">Weighting</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Viscose / Rayon -->
+      <article class="fabric-card" data-category="synthetic">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600&q=80" alt="Viscose fabric printing" loading="lazy" />
+          <span class="fabric-badge" style="background:var(--navy);color:var(--white);">Semi-Synthetic</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Viscose / Rayon</h3>
+          <p>Viscose behaves similarly to cotton for dyeing but requires careful tension control due to wet-strength loss. We use reactive and direct dyes to achieve brilliant colours with good fastness properties.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 80–220</span>
+            <span class="fspec">Types: Challis, Crepe, Jersey</span>
+            <span class="fspec">Variants: Modal, Lyocell</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Bleaching</span>
+              <span class="fsrv">Dyeing</span>
+              <span class="fsrv">Printing</span>
+              <span class="fsrv">Softening</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Linen -->
+      <article class="fabric-card" data-category="natural">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80" alt="Linen textile processing" loading="lazy" />
+          <span class="fabric-badge">Natural</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Linen</h3>
+          <p>Linen processing requires longer bleaching times and specialised desizing. Our team delivers crisp, well-finished linen with natural texture preserved. Ideal for apparel, home textiles, and fashion use.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 120–350</span>
+            <span class="fspec">Count: 12s–80s</span>
+            <span class="fspec">Weaves: Plain, Huckaback</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Bleaching</span>
+              <span class="fsrv">Dyeing</span>
+              <span class="fsrv">Finishing</span>
+              <span class="fsrv">Calendering</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PC Blend -->
+      <article class="fabric-card" data-category="blend">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Fabric quality testing" loading="lazy" />
+          <span class="fabric-badge" style="background:var(--gold);color:var(--dark);">Blend</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Polyester-Cotton (PC) Blend</h3>
+          <p>Our most requested blend — typically 65% Polyester / 35% Cotton or 80/20. Requires a two-bath dyeing process using both reactive and disperse dyes to achieve uniform colour across both fibre components.</p>
+          <div class="fabric-specs">
+            <span class="fspec">Blend: 65/35, 80/20, 50/50</span>
+            <span class="fspec">GSM: 100–280</span>
+            <span class="fspec">Common Uses: Shirting, Suiting</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Two-Bath Dyeing</span>
+              <span class="fsrv">Printing</span>
+              <span class="fsrv">Finishing</span>
+              <span class="fsrv">Wrinkle Resist</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Nylon -->
+      <article class="fabric-card" data-category="synthetic">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Synthetic fabric processing" loading="lazy" />
+          <span class="fabric-badge" style="background:var(--navy);color:var(--white);">Synthetic</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Nylon / Polyamide</h3>
+          <p>Nylon is dyed using acid dyes under slightly acidic conditions. We process nylon woven and knitted fabrics, delivering excellent colour depth and uniformity with high rub and wash fastness standards.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 40–200</span>
+            <span class="fspec">Types: Nylon 6, Nylon 66</span>
+            <span class="fspec">Forms: Woven, Knit, Non-woven</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Acid Dyeing</span>
+              <span class="fsrv">Printing</span>
+              <span class="fsrv">Heat Setting</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Wool Blend -->
+      <article class="fabric-card" data-category="blend">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=600&q=80" alt="Wool fabric close up texture" loading="lazy" />
+          <span class="fabric-badge" style="background:var(--gold);color:var(--dark);">Blend</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Wool &amp; Wool Blends</h3>
+          <p>Processed with chrome and acid dyes using a controlled temperature ramp to prevent felting. We handle worsted and woollen fabrics for suiting, shawls, and blanket applications with care and expertise.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 150–500</span>
+            <span class="fspec">Types: Worsted, Woollen</span>
+            <span class="fspec">Blends: Wool-Poly, Wool-Nylon</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Dyeing</span>
+              <span class="fsrv">Milling</span>
+              <span class="fsrv">Finishing</span>
+              <span class="fsrv">Anti-shrink</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Technical / Industrial -->
+      <article class="fabric-card" data-category="specialty">
+        <div class="fabric-img">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Industrial fabric processing" loading="lazy" />
+          <span class="fabric-badge" style="background:#333;color:var(--white);">Specialty</span>
+        </div>
+        <div class="fabric-body">
+          <h3>Technical &amp; Industrial Fabrics</h3>
+          <p>We process canvas, tarpaulin, geotextiles, and protective fabrics for industrial applications. Treatments include waterproofing, flame-retardant finishing, UV stabilisation, and anti-microbial coatings.</p>
+          <div class="fabric-specs">
+            <span class="fspec">GSM: 200–800</span>
+            <span class="fspec">Constructions: Canvas, Twill, Dobby</span>
+            <span class="fspec">Fibres: PP, PE, Aramid</span>
+          </div>
+          <div class="fabric-services">
+            <span>Services Available</span>
+            <div class="fabric-srv-tags">
+              <span class="fsrv">Waterproofing</span>
+              <span class="fsrv">FR Finish</span>
+              <span class="fsrv">UV Treatment</span>
+              <span class="fsrv">Anti-microbial</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /fabrics-grid -->
+  </div>
+</section>
+
+<!-- SERVICE DETAIL -->
+<section id="service-detail" class="sec-pad" aria-labelledby="srvTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">In Depth</span>
+      <h2 class="sec-title" id="srvTitle">Service <span>Details</span></h2>
+      <p class="sec-sub">Every service we offer is backed by specialised equipment, trained technicians, and strict quality control protocols.</p>
+    </div>
+    <div class="srv-detail-grid fi">
+
+      <article class="srv-detail-card">
+        <div class="srv-detail-header">
+          <div class="srv-detail-icon" aria-hidden="true">🧼</div>
+          <div><h3>Bleaching</h3><p>Pre-whitening for dyeing readiness or final white finish</p></div>
+        </div>
+        <div class="srv-detail-body">
+          <p>Our bleaching service removes natural pigments, impurities, and optical brighteners, delivering a consistent base white suitable for further processing or as a finished product. We use hydrogen peroxide-based systems for eco-compliance.</p>
+          <div class="srv-features">
+            <div class="srv-feature">Optical brightening agent (OBA) treatment available</div>
+            <div class="srv-feature">pH-controlled process — prevents fibre damage</div>
+            <div class="srv-feature">Suitable for cotton, linen, viscose, and blends</div>
+            <div class="srv-feature">Whiteness index up to 80–85 CIE achievable</div>
+            <div class="srv-feature">Effluent treated before discharge — zero harm to environment</div>
+          </div>
+          <div class="srv-fabrics-row">
+            <span>Compatible:</span>
+            <span class="srv-fabric-tag">Cotton</span>
+            <span class="srv-fabric-tag">Linen</span>
+            <span class="srv-fabric-tag">Viscose</span>
+            <span class="srv-fabric-tag">PC Blend</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="srv-detail-card">
+        <div class="srv-detail-header">
+          <div class="srv-detail-icon" aria-hidden="true">🎨</div>
+          <div><h3>Dyeing</h3><p>Precision colour application with batch consistency</p></div>
+        </div>
+        <div class="srv-detail-body">
+          <p>We operate multiple dyeing ranges — winch, jet, jigger, and HTHP beam — covering all fabric weights and fibre types. Computerised colour-matching ensures repeatability across batches of any size.</p>
+          <div class="srv-features">
+            <div class="srv-feature">Reactive, vat, acid, disperse, and direct dye systems</div>
+            <div class="srv-feature">Computerised colour-matching — ΔE ≤ 0.5 tolerance</div>
+            <div class="srv-feature">ISO-compliant wash, rub, and light fastness standards</div>
+            <div class="srv-feature">Capacity: up to 5,000 metres per batch run</div>
+            <div class="srv-feature">Same-shade bulk continuity guaranteed</div>
+          </div>
+          <div class="srv-fabrics-row">
+            <span>Compatible:</span>
+            <span class="srv-fabric-tag">Cotton</span>
+            <span class="srv-fabric-tag">Polyester</span>
+            <span class="srv-fabric-tag">Silk</span>
+            <span class="srv-fabric-tag">Nylon</span>
+            <span class="srv-fabric-tag">Viscose</span>
+            <span class="srv-fabric-tag">Wool</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="srv-detail-card">
+        <div class="srv-detail-header">
+          <div class="srv-detail-icon" aria-hidden="true">🖨️</div>
+          <div><h3>Printing</h3><p>Pattern reproduction with vivid, long-lasting results</p></div>
+        </div>
+        <div class="srv-detail-body">
+          <p>Our printing division handles screen, rotary, and digital printing across woven and knitted fabrics. We offer repeat sizes up to 64 cm and can reproduce complex multi-colour artwork with photographic precision.</p>
+          <div class="srv-features">
+            <div class="srv-feature">Screen printing: up to 12 colour separations</div>
+            <div class="srv-feature">Rotary printing: high-speed bulk production</div>
+            <div class="srv-feature">Digital printing: photographic quality, small MOQ</div>
+            <div class="srv-feature">Pigment, reactive, and discharge print pastes</div>
+            <div class="srv-feature">Wash fastness ≥ 4/5 on all printed substrates</div>
+          </div>
+          <div class="srv-fabrics-row">
+            <span>Compatible:</span>
+            <span class="srv-fabric-tag">Cotton</span>
+            <span class="srv-fabric-tag">Polyester</span>
+            <span class="srv-fabric-tag">Silk</span>
+            <span class="srv-fabric-tag">Viscose</span>
+            <span class="srv-fabric-tag">PC Blend</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="srv-detail-card">
+        <div class="srv-detail-header">
+          <div class="srv-detail-icon" aria-hidden="true">✨</div>
+          <div><h3>Finishing</h3><p>Surface treatment that defines the final fabric character</p></div>
+        </div>
+        <div class="srv-detail-body">
+          <p>Finishing transforms a processed fabric into a market-ready product. We offer a full suite of mechanical and chemical finishes tailored to the end use — from soft-touch garment fabrics to crisp industrial textiles.</p>
+          <div class="srv-features">
+            <div class="srv-feature">Calendering, emerising, and sueding for surface texture</div>
+            <div class="srv-feature">Sanforizing — residual shrinkage reduced to &lt; 1%</div>
+            <div class="srv-feature">Anti-wrinkle, easy-care, and moisture-wicking finishes</div>
+            <div class="srv-feature">Flame-retardant and water-repellent coatings</div>
+            <div class="srv-feature">Softener application — silicon and non-silicon options</div>
+          </div>
+          <div class="srv-fabrics-row">
+            <span>Compatible:</span>
+            <span class="srv-fabric-tag">All Fabrics</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS TABS -->
+<section id="process-tabs" class="sec-pad" aria-labelledby="tabsTitle">
+  <div class="container">
+    <div class="sec-hdr fi">
+      <span class="sec-label">Step by Step</span>
+      <h2 class="sec-title" id="tabsTitle">Processing <span>Explained</span></h2>
+      <p class="sec-sub">Dive into each stage of our workflow — from grey fabric intake to finished, dispatched goods.</p>
+    </div>
+    <div class="tab-nav fi" role="tablist" aria-label="Processing steps">
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-bleach" data-tab="tab-bleach">Bleaching</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-dye" data-tab="tab-dye">Dyeing</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-print" data-tab="tab-print">Printing</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-finish" data-tab="tab-finish">Finishing</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-qa" data-tab="tab-qa">Quality Assurance</button>
+    </div>
+    <div class="tab-panel active fi" id="tab-bleach" role="tabpanel">
+      <div class="tab-img"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=700&q=80" alt="Bleaching process in textile factory" loading="lazy" /></div>
+      <div class="tab-content">
+        <h3>Bleaching Process</h3>
+        <p>Bleaching is the foundation of all subsequent processing. A well-bleached fabric ensures uniform dye uptake, consistent colour depth, and superior print definition. We use hydrogen peroxide-based bleaching with careful alkali management.</p>
+        <div class="tab-steps">
+          <div class="tab-step"><div class="tab-step-num">1</div><div class="tab-step-txt"><h4>Grey Fabric Preparation</h4><p>Fabric is desized and scoured to remove warp sizing, oils, and natural impurities before bleaching begins.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">2</div><div class="tab-step-txt"><h4>Bleach Bath Application</h4><p>H₂O₂ is applied at controlled concentrations (3–5 g/L) with alkali stabilisers at 95–100°C for 45–60 minutes.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">3</div><div class="tab-step-txt"><h4>Neutralisation &amp; Hot Wash</h4><p>Fabric is thoroughly washed and neutralised to remove all traces of bleach chemicals before downstream processing.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">4</div><div class="tab-step-txt"><h4>Whiteness Assessment</h4><p>Whiteness index measured using spectrophotometer. Batches below specification are re-bleached before proceeding.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel fi" id="tab-dye" role="tabpanel">
+      <div class="tab-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Dyeing process" loading="lazy" /></div>
+      <div class="tab-content">
+        <h3>Dyeing Process</h3>
+        <p>Colour accuracy is our most critical deliverable. Our dyeing process combines modern machinery with a computerised colour-matching laboratory to guarantee shade consistency across every batch — small run or bulk order.</p>
+        <div class="tab-steps">
+          <div class="tab-step"><div class="tab-step-num">1</div><div class="tab-step-txt"><h4>Lab Dip Development</h4><p>Small sample dips are developed and approved by the client before bulk production commences.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">2</div><div class="tab-step-txt"><h4>Recipe Calculation</h4><p>Computerised colour-matching software generates the precise dye recipe — dye percentages, auxiliaries, salt, and alkali ratios.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">3</div><div class="tab-step-txt"><h4>Bulk Dyeing</h4><p>Fabric loaded into jet, winch, jigger, or HTHP machine. Temperature and pH profile follows a programmed ramp curve.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">4</div><div class="tab-step-txt"><h4>After-treatment &amp; Washing</h4><p>Soaping, washing, and softening applied. Final shade checked against approved standard on spectrophotometer.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel fi" id="tab-print" role="tabpanel">
+      <div class="tab-img"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=700&q=80" alt="Printing process" loading="lazy" /></div>
+      <div class="tab-content">
+        <h3>Printing Process</h3>
+        <p>From single-colour block prints to 12-colour photographic repeats, our printing facility handles the full range of pattern complexities. We maintain engraved screens for repeat orders and offer rapid new screen preparation.</p>
+        <div class="tab-steps">
+          <div class="tab-step"><div class="tab-step-num">1</div><div class="tab-step-txt"><h4>Screen / Film Preparation</h4><p>Artwork separated into individual colour films. Screens exposed, developed, and hardened for production.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">2</div><div class="tab-step-txt"><h4>Paste Mixing</h4><p>Print pastes prepared to exact colour formulations. Viscosity adjusted for fabric type and print method.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">3</div><div class="tab-step-txt"><h4>Printing &amp; Drying</h4><p>Fabric printed on flat-bed or rotary printing table, then passed through thermofix or steam fixation.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">4</div><div class="tab-step-txt"><h4>Washing &amp; Finishing</h4><p>Printed fabric washed to remove unfixed dye and thickener. Softener applied. Final print inspection carried out.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel fi" id="tab-finish" role="tabpanel">
+      <div class="tab-img"><img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=700&q=80" alt="Finishing process" loading="lazy" /></div>
+      <div class="tab-content">
+        <h3>Finishing Process</h3>
+        <p>Finishing is the final step that defines how a fabric looks, feels, and performs. Our finishing range handles everything from simple softening to complex functional coatings for performance textiles.</p>
+        <div class="tab-steps">
+          <div class="tab-step"><div class="tab-step-num">1</div><div class="tab-step-txt"><h4>Chemical Finishing</h4><p>Softeners, anti-wrinkle agents, or functional chemicals applied via padding mangle at defined pick-up percentages.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">2</div><div class="tab-step-txt"><h4>Curing / Drying</h4><p>Fabric passed through stenter at precise temperatures to cure chemicals and set fabric dimensions.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">3</div><div class="tab-step-txt"><h4>Mechanical Finishing</h4><p>Calendering, sanforizing, or emerising applied as required for the target handle and appearance.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">4</div><div class="tab-step-txt"><h4>Width &amp; GSM Check</h4><p>Final fabric width, GSM, and shrinkage verified against specifications before batching and dispatch.</p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel fi" id="tab-qa" role="tabpanel">
+      <div class="tab-img"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80" alt="Quality assurance lab" loading="lazy" /></div>
+      <div class="tab-content">
+        <h3>Quality Assurance</h3>
+        <p>Our in-house quality lab is equipped with industry-standard instruments. Every processed lot is tested against defined parameters before it leaves our facility — no exceptions, no shortcuts.</p>
+        <div class="tab-steps">
+          <div class="tab-step"><div class="tab-step-num">1</div><div class="tab-step-txt"><h4>Shade Measurement</h4><p>Spectrophotometer readings taken. ΔE values calculated against approved standard. Pass criteria: ΔE ≤ 0.8.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">2</div><div class="tab-step-txt"><h4>Fastness Testing</h4><p>Wash fastness (ISO 105-C06), rub fastness (ISO 105-X12), and light fastness (ISO 105-B02) tested per lot.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">3</div><div class="tab-step-txt"><h4>Physical Testing</h4><p>GSM, width, tensile strength, tear strength, and dimensional stability checked on every processed lot.</p></div></div>
+          <div class="tab-step"><div class="tab-step-num">4</div><div class="tab-step-txt"><h4>Certification &amp; Dispatch</h4><p>Passing lots receive a quality certificate with test results. Non-conforming lots are reprocessed or rejected.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section id="comparison" class="sec-pad" aria-labelledby="compTitle">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label">Quick Reference</span>
+      <h2 class="sec-title" id="compTitle">Fabric × Service <span>Matrix</span></h2>
+      <p class="sec-sub">A quick-reference guide showing which services are available for each fabric type we process.</p>
+    </div>
+    <div class="tbl-wrap fi" role="region" aria-label="Fabric service compatibility table">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th scope="col">Fabric Type</th>
+            <th scope="col">Bleaching</th>
+            <th scope="col">Dyeing</th>
+            <th scope="col">Printing</th>
+            <th scope="col">Finishing</th>
+            <th scope="col">Mercerising</th>
+            <th scope="col">FR Treatment</th>
+            <th scope="col">Waterproofing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cotton</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="part">On request</span></td><td><span class="part">On request</span></td></tr>
+          <tr><td>Polyester</td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Silk</td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="part">Limited</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Viscose / Rayon</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Linen</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="part">Limited</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="part">On request</span></td><td><span class="part">On request</span></td></tr>
+          <tr><td>PC Blend (65/35)</td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Nylon / Polyamide</td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="part">On request</span></td><td><span class="check">✓</span></td></tr>
+          <tr><td>Wool &amp; Blends</td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="part">Limited</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="part">On request</span></td><td><span class="cross">—</span></td></tr>
+          <tr><td>Industrial / Technical</td><td><span class="part">Specialised</span></td><td><span class="part">Specialised</span></td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="cross">—</span></td><td><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS CALLOUT -->
+<section id="specs-callout" class="sec-pad-sm" aria-label="Processing capabilities">
+  <div class="container">
+    <div class="sec-hdr center fi">
+      <span class="sec-label gold">Capabilities</span>
+      <h2 class="sec-title light" id="capTitle">Our Processing <span>Capacity</span></h2>
+    </div>
+    <div class="callout-grid fi">
+      <div class="callout-item"><div class="callout-ico" aria-hidden="true">🏭</div><h4>Daily Processing</h4><p>Up to 25,000 metres of fabric processed per day across both facilities combined.</p></div>
+      <div class="callout-item"><div class="callout-ico" aria-hidden="true">🎨</div><h4>Colour Range</h4><p>Over 3,000 standard shades in our library. Custom Pantone matching available on request.</p></div>
+      <div class="callout-item"><div class="callout-ico" aria-hidden="true">⚡</div><h4>Turnaround</h4><p>Standard: 5–7 working days. Express: 2–3 days. Emergency: 24-hour service available.</p></div>
+      <div class="callout-item"><div class="callout-ico" aria-hidden="true">🔬</div><h4>MOQ</h4><p>Minimum order: 200 metres for most services. Digital printing available from 50 metres.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner fi">
+      <div>
+        <h2>Ready to Process Your Fabric?</h2>
+        <p>Get in touch with our team for a quote, a fabric assessment, or a facility visit.</p>
+      </div>
+      <div class="cta-btns">
+        <a href="index.html#contact" class="cta-btn-dark">Request a Quote</a>
+        <a href="index.html#services" class="cta-btn-out">View All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="foot-inner">
+      <div class="foot-brand-blk">
+        <div class="fl-row">
+          <div class="fl-ico" aria-hidden="true">🏇</div>
+          <div><div class="fl-name">Prem Pooja Textile<br>Processors Pvt. Ltd.</div><div class="fl-tag">Bleaching · Dyeing · Printing</div></div>
+        </div>
+        <p class="foot-desc">Transforming fabrics with precision and excellence since 1998. Mumbai &amp; Badlapur, Maharashtra.</p>
+      </div>
+      <div class="foot-col"><h4>Navigation</h4><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#services">Services</a></li><li><a href="#fabrics">Fabrics</a></li><li><a href="#comparison">Comparison</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+      <div class="foot-col"><h4>Services</h4><ul class="foot-links"><li><a href="#service-detail">Bleaching</a></li><li><a href="#service-detail">Dyeing</a></li><li><a href="#service-detail">Printing</a></li><li><a href="#service-detail">Finishing</a></li><li><a href="#service-detail">Quality Testing</a></li></ul></div>
+      <div class="foot-col"><h4>Contact</h4><ul class="foot-links"><li><a href="tel:+919819570709">+91 98195 70709</a></li><li><a href="tel:+919820280057">+91 98202 80057</a></li><li><a href="mailto:prempoojatex@hotmail.com">prempoojatex@hotmail.com</a></li><li><a href="#">Mumbai Branch</a></li><li><a href="#">Badlapur Branch</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2024 <a href="index.html">Prem Pooja Textile Processors Pvt. Ltd.</a> All rights reserved.</p>
+      <p style="font-size:0.76rem;color:rgba(255,255,255,0.20);">Fabrics &amp; Services Reference Page</p>
+    </div>
+  </div>
+</footer>
+<button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+<script>
+(function(){
+  'use strict';
+  const nav  = document.getElementById('navbar');
+  const ham  = document.getElementById('hamburger');
+  const mob  = document.getElementById('mobileMenu');
+  const st   = document.getElementById('scrollTop');
+
+  /* Navbar scroll */
+  window.addEventListener('scroll', ()=>{
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+    st.classList.toggle('visible', window.scrollY > 300);
+  }, {passive:true});
+
+  st.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+  /* Hamburger */
+  ham.addEventListener('click', ()=>{
+    const open = ham.classList.toggle('open');
+    mob.classList.toggle('open', open);
+    ham.setAttribute('aria-expanded', open);
+    mob.setAttribute('aria-hidden', !open);
+  });
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    ham.classList.remove('open'); mob.classList.remove('open');
+    ham.setAttribute('aria-expanded',false); mob.setAttribute('aria-hidden',true);
+  }));
+
+  /* Smooth scroll offset */
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const t = document.querySelector(a.getAttribute('href'));
+      if(t){ e.preventDefault(); window.scrollTo({top: t.offsetTop - 80, behavior:'smooth'}); }
+    });
+  });
+
+  /* Fade-in on scroll */
+  const fiEls = document.querySelectorAll('.fi');
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver(entries=>entries.forEach(en=>{
+      if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+    }),{threshold:0.08, rootMargin:'0px 0px -30px 0px'});
+    fiEls.forEach(el=>io.observe(el));
+  } else { fiEls.forEach(el=>el.classList.add('in')); }
+
+  /* Fabric filter */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const fabricCards = document.querySelectorAll('#fabricsGrid .fabric-card');
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      filterBtns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      fabricCards.forEach(card=>{
+        const match = filter === 'all' || card.dataset.category === filter;
+        card.style.display = match ? '' : 'none';
+        card.style.opacity = match ? '1' : '0';
+      });
+    });
+  });
+
+  /* Tabs */
+  const tabBtns   = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+  tabBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      tabBtns.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      tabPanels.forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      const panel = document.getElementById(btn.dataset.tab);
+      if(panel){ panel.classList.add('active'); panel.classList.add('in'); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
